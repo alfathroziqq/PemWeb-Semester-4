@@ -1,0 +1,100 @@
+<!-- ALFATH ROZIQ WIDHAYAKA -->
+<!-- L0122012 -->
+<!-- KELAS A -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daftar Koleksi Super Mario</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,700&display=swap">
+    <style>
+        body {
+            background-color:#dddfc5;
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            max-width: 80%;
+            margin: 70px auto;
+            padding: 40px;
+            background-color: #fff2f7;
+            border-radius: 50px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 40px;
+            color:#000000;
+        }
+        ul {
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+            gap: 25px;
+            margin: 0px 40px 0px 40px;
+        }
+        li {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            background-color: #dfdfdf;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+            transition: transform 0.3s ease;
+        }
+        li:hover {
+            background-color: #00ffb7;
+            transform: scale(1.03);
+        }
+        a {
+            text-decoration: none;
+            color: #000000;
+        }
+        .image-api {
+            border-radius: 8px;
+            width: 165px; 
+            height: auto;
+            display: block; 
+            margin: auto; 
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Koleksi Super Mario</h1>
+        <ul id="character-list"></ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $.ajax({
+                url: 'https://www.amiiboapi.com/api/amiibo/?name=mario',
+                type: 'GET',
+                dataType: 'json',
+                success: function(data) {
+                    const characterList = $('#character-list');
+                    $.each(data.amiibo, function(index, character) {
+                        const listItem = $('<li>');
+                        const link = $('<a>').attr('href', 'detail.html?id=' + character.tail);
+                        const image = $('<img>').addClass('image-api').attr('src', character.image).attr('alt', character.character);
+                        const characterName = $('<p>').text(character.character);
+                        link.append(image, characterName);
+                        listItem.append(link);
+                        characterList.append(listItem);
+                    });
+                },
+                error: function(error) {
+                    console.error('Error:', error);
+                }
+            });
+        });
+    </script>
+</body>
+</html>

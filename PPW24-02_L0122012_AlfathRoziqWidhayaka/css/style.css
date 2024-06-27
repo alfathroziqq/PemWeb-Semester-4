@@ -1,0 +1,237 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Satisfy&display=swap');
+
+:root {
+    --pr-color: #387ADF;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: white;
+}
+
+/* Navbar */
+a:visited {
+    text-decoration: underline;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.nav-link {
+    font-size: 16px;
+    color: white;
+}
+
+.nav-link.active {
+    font-weight: 700;
+}
+
+.btn-primary {
+    width: 133px;
+    height: 40px;
+    background-color: white;
+    color: var(--pr-color);
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+/* Header */
+.banner {
+    background: url("https://wallpapers.com/images/hd/microsoft-teams-blur-background-skp2sasidmnw9x1y.jpg")
+    no-repeat center center;
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 19.2%;
+    color: #fff;
+}
+
+h4 {
+    font-family: "Satisfy", cursive;
+}
+
+.h4-cv {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: "Satisfy", cursive;
+}
+
+/* Tentang */
+.img-header {
+    border-radius: 50%;
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.text-isi {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Skill */
+/* Box Model */
+.box-model-skill {
+    margin-left: 355px;
+    width: 0%;
+    height: 200px;
+    padding: 0px;
+    border: none;
+}
+
+.skill h6 {
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: black;
+    font-size: 16px;
+}
+
+.progress-bar {
+    overflow: visible;
+    background-color: #959595;
+    width: 600px;
+    height: 10px;
+    border-radius: 5px;
+    margin: auto;
+}
+
+.progress-bar div {
+    position: relative;
+    height: 10px;
+    border-radius: 5px;
+    width: 0%;
+}
+
+.progress-bar div span {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background: black;
+    float: right;
+    margin-top: -15px;
+    margin-right: -20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.html {
+    background: #e91e63;
+    animation: html 1s linear forwards;
+}
+
+.css {
+    background: #cddc39;
+    animation: css 1s linear forwards;
+}
+
+.python {
+    background: #00bcd4;
+    animation: python 1s linear forwards;
+}
+
+.sql {
+    background: #ffeb3b;
+    animation: sql 1s linear forwards;
+}
+
+.html span {
+    border: 1px solid #e91e63;
+}
+
+.css span {
+    border: 1px solid #cddc39;
+}
+
+.python span {
+    border: 1px solid #00bcd4;
+}
+
+.sql span {
+    border: 1px solid #ffeb3b;
+}
+
+@keyframes html {
+    100% {
+        width: 76%;
+    }
+}
+
+@keyframes css {
+    100% {
+        width: 50%;
+    }
+}
+
+@keyframes python {
+    100% {
+        width: 67%;
+    }
+}
+
+@keyframes sql {
+    100% {
+        width: 80%;
+    }
+}
+
+/* Aktivitas */
+h5 {
+    margin-top: 15px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.features .card {
+    background-color: #b8c4e4;
+    padding: 16px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .card:hover {
+    background-color: #d4e9ff;
+    border-color: black;
+}
+
+.baris {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.kolom {
+    float: left;
+    width: 33%;
+    padding: 15px;
+}
+
+/* Tabel */
+td, th {
+    padding: 5px;
+    border: 2px solid black;
+}
+
+
+footer {
+    background: #0f0c29;
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
